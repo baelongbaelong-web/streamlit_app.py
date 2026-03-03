@@ -48,4 +48,5 @@ with st.sidebar:
                                                             st.subheader("💡 Vol2Vol Insights")
                                                             st.write("- **Zone 5350:** OI +9 | Churn 0.75 (สะสมของจริง)")
                                                             st.write("- **Zone 5400:** OI 318 | Churn 0.13 (เล่นสั้นเยอะ)")
+                                                            ne
                                                             
