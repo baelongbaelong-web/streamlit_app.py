@@ -16,14 +16,14 @@ block_dist = st.number_input("Block Distance", value=25)
 basis_rt = f_price - s_price
 drift_gap = basis_rt - manual_diff
 
-# แสดงผล
+# แสดงผลค่า Basis
 st.divider()
 c1, c2 = st.columns(2)
 c1.metric("Basis RT", f"{basis_rt:.2f}")
 c2.metric("Drift Gap", f"{drift_gap:.2f}")
 
-# ตาราง Grid
-st.subheader("🎯 Grid Zones")
+# ตาราง Grid Zone
+st.subheader("🎯 Grid Zones (Spot Order)")
 base_f = (f_price // block_dist) * block_dist
 levels = [base_f + (block_dist * i) for i in range(2, -3, -1)]
 
@@ -35,4 +35,4 @@ for lvl in levels:
                         })
 
                         st.table(pd.DataFrame(grid_data))
-                        
+    
